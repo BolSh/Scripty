@@ -1,3 +1,7 @@
+if myHero.charName ~= "Orianna" then
+	return
+end
+
 function SexyPrint(message)
    local sexyName = "<font color=\"#E41B17\">[<b>Oria</b>]:</font>"
    local fontColor = "FFFFFF"
@@ -8,13 +12,13 @@ local ScriptName = "Oria"
 local Author = "Shany"
 local Version = "0.01"
 local UPDATE_HOST = "raw.githubusercontent.com"
-local UPDATE_PATH = "~~".."?rand="..math.random(1,10000)
+local UPDATE_PATH = "/BolSh/Scripty/master/Oria.lua".."?rand="..math.random(1,10000)
 local UPDATE_FILE_PATH = SCRIPT_PATH..GetCurrentEnv().FILE_NAME
 local UPDATE_URL = "https://"..UPDATE_HOST..UPDATE_PATH
 local AUTOUPDATE = true
 
 if AUTOUPDATE then
-	local ServerData = GetWebResult(UPDATE_HOST,"~~.version")
+	local ServerData = GetWebResult(UPDATE_HOST,"/BolSh/Scripty/master/Oria.version")
 	if ServerData then
 		ServerVersion = type(tonumber(ServerData)) == "number" and tonumber(ServerData) or nil
 		if ServerVersion then
@@ -31,3 +35,5 @@ if AUTOUPDATE then
 		SexyPrint("Was not able to get version info"
 		end
 	end
+
+if myHero = GetMyhero()
